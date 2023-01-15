@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/app.css">
+    <title>/MF/ Desarrollo Web</title>
+</head>
+
+<body>
+    <!-- Barra de navegacion -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>/MF/</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionar" onclick="seleccionar(this)">Inicio</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">Sobre Mi</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">Servicios</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)">Portfolio</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">Contacto</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Iconos del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <!-- Iconos de las redes sociales -->
+                    <div class="redes">
+                        <a href="https://wa.me/5212616450814"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me//Marcelo333444"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.facebook.com/marcelo.feliziani/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/marcelo-feliziani-85a165249"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </header>
+            <!-- Presentacion -->
+            <div class="presentacion">
+                <p class="bienvenida">Bienvenidos</p>
+                <h2>Soy<span>Marcelo Feliziani</span>, Desarrollador Web</h2>
+                <p class="descripcion">Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Earum voluptas a quaerat rem accusantium,
+                    minima ipsa dolores id architecto ex provident dicta inventore
+                    ullam molestiae, enim, maxime doloremque voluptate praesentium.</p>
+                <a href="#portfolio">Ir a Portafolio</a>
+            </div>
+        </div>
+    </section>
+    <!-- seccion sobre mi -->
+    <section id="sobremi">
+        <div class="contenedor-foto">
+            <img src="./Imagenes/perfil.jpg" id="foto1" alt="foto">
+            <a onclick="cambiarImagen()">
+            <button><i class="fa-solid fa-arrow-rotate-right"></i>
+            </button></a>
+        </div>
+        
+        <div class="sobremi">
+            <p class="titulo-seccion">Sobre Mi</p>
+            <h2>Hola, soy <span>Marcelo Feliziani</span></h2>
+            <h3>Experiancia Laboral.</h3>
+            <div>
+            <button class="accordion">Información</button>
+                <div class="panel">
+                  <ul id="list" class="lista">
+                    <li><b>Ejército Argentino: (8 años),</b>Me desempeñe como soldado desde <b>(21 de oct del 2012 hasta el 1 de
+                        nov del 2019),
+                      </b>desempeñe tareas correspodnientes a mi rol de combate como (radio operador del pelotón comando), y en
+                      tareas administrativas
+                      me desempeñe como auxiliar de jefe y encargado de la CoCdoYSer(compañia de comando y servicios),
+                      desempeñando tareas administrativas,
+                      (servicios del personal, control de personal, etc...).</li>
+                    <li><b>Mendoza Norte:</b>Me desempeñe como portero en empresa de seguridad <b>(01 de nov del 2019 hasta el
+                        29
+                        de dic del 2020).</b></li>
+                    <li><b>Westech:</b>Me desempeñe como portero en empresa de seguridad <b>(01 de ene del 2021 hasta el dia de
+                        la
+                        fecha).</b></li>
+                  </ul>
+                </div>
+        
+                <button class="accordion">Modificar Información</button>
+                <div class="panel">
+        
+                  <input class="estiloInput" id="inputUsuario" type="text" placeholder="Añadir Información">
+                  <button class="botonInput" id="accionar">Agregar</button>
+                  <button class="botonInput" id="borrar" onclick="remove_child()">Eliminar</button>
+        
+                </div>
+                 
+            
+                <h3>Estudios.</h3>
+
+                <button class="accordion">Información</button>
+                    <div class="panel">
+                      <ul id="list1" class="lista">
+                        <li><b>Secundario:</b>Completo<b>Bachiller en economía (Instituto academico BALZAC).</b></li>
+                        <li><b>Inglés:</b>Basico</li>
+                        <li><b>Curso / Se programar / Plan Argentina Programa:</b>1ra Etapa aprobada.</li>
+                        <li><b>Curso / Yo programo / Plan Argentina Programa:</b>2da Etapa en curso.</li>
+                      </ul>
+                    </div>
+            
+            
+                    <button class="accordion">Modificar Información</button>
+                    <div class="panel">
+            
+                      <input class="estiloInput" id="inputUsuario2" type="text" placeholder="Añadir Información">
+                      <button class="botonInput" id="accionar2">Agregar</button>
+                      <button class="botonInput" id="borrar" onclick="remove_child1()">Eliminar</button>
+            
+                    </div>
+                    
+                    <h3>Datos sobre mi interes.</h3>
+
+                <button class="accordion">Información</button>
+                    <div class="panel">
+                      <ul id="list2" class="lista">
+                        <li><b>En el estudio:</b>Soy autodidacta, me interesa el ambito de la tecnología, inicie con mi interes en
+                          la
+                          programación en el año 2019,
+                          hasta poder inscribirme en el curso de argentina programa.</li>
+                        <li><b>Trabajo:</b>Me interesa un ambito en el que el trabajo en equípo sea fundamental, soy una persona que
+                          le interesa aprender y aportar con y de los integrantes de un grupo.
+                          Me interesé en la programación no solo por su modo de trabajo, ya sea a distancia o presencial o por el
+                          echo
+                          de poder estar mas tiempo con mi familia y poder hacer actividades
+                          que me gusten, me intereso mucho la modalidad de trabajo en equipo y el poder especializarme en algo que
+                          sea
+                          dinamico, ya que soy una persona que le gusta aprender y trabajar en equipo.</li>
+                        <li><b>Con respecto a la programación:</b>En el curso para ser full stack me encuentro muy interesado, pero
+                          me
+                          inclino mas a lo que es el back end, y tengo interes de seguir especializandome,
+                          asi tambien me gustaria poder especializarme en el desarrollo de aplicaciones web.</li>
+                      </ul>
+                    </div>
+            
+                    <button class="accordion">Modificar Información</button>
+                    <div class="panel">
+            
+                      <input class="estiloInput" id="inputUsuario3" type="text" placeholder="Añadir Información">
+                      <button class="botonInput" id="accionar3">Agregar</button>
+                      <button class="botonInput" id="borrar" onclick="remove_child2()">Eliminar</button>
+            
+                    </div>
+                </div>
+
+            <a download="C/V: Feliziani Marcelo" href="../SETIEMBRE-Horas-Final. (1).xlsx">Descargar CV</a>
+        </div>
+    </section>
+    <!-- seccion servicios -->
+    <section id="servicios">
+        <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+        <div class="fila">
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-code"></i></span>
+                <h4>Diseño de sitios Web</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphics</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consecteturffffffffdfdfdffdfdfdf</p>
+            </div>
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-brands fa-php"></i></i></span>
+                <h4>Diseño de sitios Web</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphics</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consecteturffffffffdfdfdffdfdfdf</p>
+            </div>
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-arrow-up-wide-short"></i></span>
+                <h4>Diseño de sitios Web</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphics</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consecteturffffffffdfdfdffdfdfdf</p>
+            </div>
+
+            <div class="servicio">
+                <span class="icono"><i class="fa-solid fa-database"></i></i></span>
+                <h4>Diseño de sitios Web</h4>
+                <hr>
+                <ul class="servicios-tag">
+                    <li>Web</li>
+                    <li>Graphics</li>
+                    <li>SEO</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consecteturffffffffdfdfdffdfdfdf</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- seccion de habilidades -->
+    <div class="contenedor-skills" id="skills">
+        <h3>HABILIDADES</h3>
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>Html & Css</p>
+                <span class="porcentaje">60%</span>
+            </div>
+            <div class="barra">
+                <div id="html" class="barra-progreso1"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>JavaScript</p>
+                <span class="porcentaje">40%</span>
+            </div>
+            <div class="barra">
+                <div id="js" class="barra-progreso2"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>Bases de Datos</p>
+                <span class="porcentaje">20%</span>
+            </div>
+            <div class="barra">
+                <div id="bd" class="barra-progreso3"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="info">
+                <p><span class="lista"></span>Angular</p>
+                <span class="porcentaje">20%</span>
+            </div>
+            <div class="barra">
+                <div id="ps" class="barra-progreso4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Seccion Portafolio -->
+    <section id="portfolio">
+        <h3 class="titulo-seccion">MIS PROYECTOS</h3>
+        <div class="fila">
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="./Imagenes/imagenfondo.jpg" alt="foto">
+                <div class="info">
+                    <h4>Descripcion del proyecto</h4>
+                    <p>Diseño Web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="./Imagenes/imagenfondo.jpg" alt="foto">
+                <div class="info">
+                    <h4>Descripcion del proyecto</h4>
+                    <p>Diseño Web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="./Imagenes/imagenfondo.jpg" alt="foto">
+                <div class="info">
+                    <h4>Descripcion del proyecto</h4>
+                    <p>Diseño Web</p>
+                </div>
+            </div>
+
+            <div class="proyecto">
+                <div class="overlay"></div>
+                <img src="./Imagenes/imagenfondo.jpg" alt="foto">
+                <div class="info">
+                    <h4>Descripcion del proyecto</h4>
+                    <p>Diseño Web</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seccion Contacto -->
+    <section id="contacto">
+        <h3 class="titulo-seccion">Contactanos Ahora</h3>
+        <div class="contenedor-form">
+            <form id="formulario">
+                <div class="fila mitad">
+                    <input type="tel" placeholder="Número Telefonico" class="input-mitad" id="inputTelefono">
+                    <input type="email" placeholder="Dirección de Email" class="input-mitad" id="inputEmail">
+                </div>
+                <div class="fila">
+                    <input type="text" placeholder="Nombres y Apellidos" class="input-full" id="inputDatos">
+                </div>
+                <div class="fila">
+                    <input type="text" cols="30" rows="10" placeholder="Tu Mensaje" class="input-full"
+                        id="inputMensaje">
+                </div>
+                <input type="submit" value="Enviar" class="btn-enviar">
+            </form>
+        </div>
+    </section>
+    <script src="./Js/contactoapp.js"></script>
+    <script src="./Js/app.js"></script>
+</body>
+ <!-- Seccion Footer -->
+    <footer>
+        <p>Todos los derechos reservados--2022</p>
+        <div class="redes">
+            <a href="https://wa.me/5212616450814"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://t.me//Marcelo333444"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.facebook.com/marcelo.feliziani/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/marcelo-feliziani-85a165249"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+</html>
